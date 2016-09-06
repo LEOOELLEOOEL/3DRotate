@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>3D旋转魔法</title>
+	</head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			background: url(img/20140831025000_Fa3fs.png) no-repeat;
+			width: 100%;
+			height: 100%;
+			-webkit-perspective: 1000;
+		}
+		.wrap {
+			height: 200px;
+			width: 200px;
+			margin: 120px auto 0;	
+			position: relative;
+			-webkit-transform-style: preserve-3d;
+			-webkit-transform: rotateX(13deg) rotateY(-20deg);
+			animation: mofang_rotate 5s linear infinite;
+		}
+		
+		@-webkit-keyframes mofang_rotate {
+			from {
+				transform: rotateX(13deg) rotateY(-20deg);
+			}
+			to {
+				transform: rotateX(13deg) rotateY(340deg);
+			}
+		}
+		.wrap ul {
+			width: 100px;
+			height: 100px;
+			margin: 50px;
+			position: absolute;
+			-webkit-transform-style: preserve-3d;
+			-webkit-transform: rotateX(0deg) rotateY(0deg);
+		}
+		ul li {
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			-webkit-transition: all 1s linear 0.1s;
+		}
+		ul li:nth-child(1) {
+			background: url(img/goods_pandect_right_imgs_img1.jpg);
+			background-size: cover;
+			-webkit-transform: translateZ(50px);
+		}
+		
+		.wrap:hover ul li:nth-child(1) {
+			-webkit-transform: translateZ(100px);
+		}
+		
+		ul li:nth-child(2) {
+			background: url(img/goods_pandect_right_imgs_img2.jpg);
+			background-size: cover;
+			-webkit-transform: rotateY(90deg) translateZ(50px);
+		}
+		
+		.wrap:hover ul li:nth-child(2) {
+			-webkit-transform: rotateY(90deg) translateZ(100px);
+		}
+		
+		ul li:nth-child(3) {
+			background: url(img/goods_pandect_right_imgs_img3.jpg);
+			background-size: cover;
+			-webkit-transform: rotateY(180deg) translateZ(50px);
+		}
+		
+		.wrap:hover ul li:nth-child(3) {
+			-webkit-transform: rotateY(180deg) translateZ(100px);
+		}
+		
+		ul li:nth-child(4) {
+			background: url(img/goods_pandect_right_imgs_img4.jpg);
+			background-size: cover;
+			-webkit-transform: rotateY(270deg) translateZ(50px);
+		}
+		
+		.wrap:hover ul li:nth-child(4) {
+			-webkit-transform: rotateY(270deg) translateZ(100px);
+		}
+		
+		ul li:nth-child(5) {
+			background: url(img/goods_pandect_right_imgs_img5.jpg);
+			background-size: cover;
+			-webkit-transform: rotateX(90deg) translateZ(50px);
+		}
+		
+		.wrap:hover ul li:nth-child(5) {
+			-webkit-transform: rotateX(90deg) translateZ(100px);
+		}
+		
+		ul li:nth-child(6) {
+			background: url(img/goods_pandect_right_imgs_img10.jpg);
+			background-size: cover;
+			-webkit-transform: rotateX(-90deg) translateZ(50px);
+		}
+		
+		.wrap:hover ul li:nth-child(6) {
+			-webkit-transform: rotateX(-90deg) translateZ(100px);
+		}
+		
+		.wrap ol {
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			-webkit-transform-style: preserve-3d;
+			-webkit-transform: rotateX(0deg) rotateY(0deg);
+		}
+		
+		ol li:nth-child(1) {
+			background-size: cover;
+			-webkit-transform: translateZ(100px);
+		}
+		
+		.wrap:hover ol li:nth-child(1) {
+			-webkit-transform: translateZ(300px);
+		}
+		
+		ol li:nth-child(2) {
+			background-size: cover;
+			-webkit-transform: rotateY(90deg) translateZ(100px);
+		}
+		
+		.wrap:hover ol li:nth-child(2) {
+			-webkit-transform: rotateY(90deg) translateZ(300px);
+		}
+		
+		ol li:nth-child(3) {
+			background-size: cover;
+			-webkit-transform: rotateY(180deg) translateZ(100px);
+		}
+		
+		.wrap:hover ol li:nth-child(3) {
+			-webkit-transform: rotateY(180deg) translateZ(300px);
+		}
+		
+		ol li:nth-child(4) {
+			background-size: cover;
+			-webkit-transform: rotateY(270deg) translateZ(100px);
+		}
+		
+		.wrap:hover ol li:nth-child(4) {
+			-webkit-transform: rotateY(270deg) translateZ(300px);
+		}
+		
+		ol li:nth-child(5) {
+			background-size: cover;
+			-webkit-transform: rotateX(90deg) translateZ(100px);
+		}
+		
+		.wrap:hover ol li:nth-child(5) {
+			-webkit-transform: rotateX(90deg) translateZ(300px);
+		}
+		
+		ol li:nth-child(6) {
+			background-size: cover;
+			-webkit-transform: rotateX(-90deg) translateZ(100px);
+		}
+		
+		.wrap:hover ol li:nth-child(6) {
+			-webkit-transform: rotateX(-90deg) translateZ(300px);
+		}
+		
+		ol li {
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-color: #ffffff;
+			opacity: 0.3;
+			-webkit-transition: all 1s linear 0.1s;
+		}
+		ul,
+		ol {
+			list-style: none;
+		}
+		
+		img {
+			border: 0;
+		}
+	</style>
+
+	<body>
+		<div class="wrap">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ol>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ol>
+		</div>
+		<script type="text/javascript">
+		</script>
+	</body>
+
+</html>
